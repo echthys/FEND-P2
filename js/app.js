@@ -16,23 +16,54 @@ function createNavBarEntries(navItems) {
 
 function smoothScroll() {
     const liItems = document.getElementsByTagName("li");
-    console.log(liItems);
     for (const li of liItems) {
-        console.log(`#${li.innerText}`);
         li.addEventListener("click", function () {
-            console.log(`#${li.innerText.toLowerCase()}`);
             const scrollToElement = document.getElementById(`${li.innerText.toLowerCase()}`);
             scrollToElement.scrollIntoView({ behavior: "smooth", block: "start" })
         })
     }
 }
 
+function highlight() {
+    const sections = document.getElementsByTagName("section");
+    for (const section of sections) {
+        window.addEventListener("scroll", function () {
+            // console.log(section.)
+            if (isInViewport(section)) {
+                section.setAttribute("class", "highlight");
+            }
+            else {
+                section.removeAttribute("class", "highlight")
+            }
+        });
+    }
+}
+
+
+// Source: https://www.javascripttutorial.net/dom/css/check-if-an-element-is-visible-in-the-viewport/
+function isInViewport(element) {
+    console.log(element)
+    const rect = element.getBoundingClientRect();
+    console.log(rect.top)
+    // console.log(window.innerHeight)
+    // console.log(document.documentElement.clientHeight)
+    // console.log(window.innerWidth)
+    // console.log(document.documentElement.clientWidth)
+    console.log(rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
 
 
 function main() {
     const navItems = getNavItems();
     createNavBarEntries(navItems);
     smoothScroll();
+    highlight();
 
 }
 
