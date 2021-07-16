@@ -26,14 +26,14 @@
             <h1 class="heading">Hi I'm Ethan</h1>
             <p>A Cloud Developer</p>
 
-            <img src="img/spacex-l.jpg" id="head-image" alt="Stars reflecting in lake">
+            <img src="img/spacex-m.jpg" id="head-image" alt="Stars reflecting in lake">
         </div>
     </header>
     <main>
 
-        <section>
+        <section id="about">
             <div class="area">
-                <div id="about" class="about">
+                <div class="about">
                     <div id="about-head">
                         <h2 class="nav-head">About</h2>
                     </div>
@@ -58,22 +58,6 @@
                             quis, nobis velit delectus, quod amet excepturi voluptates minima in qui illo unde quae?
                             Perspiciatis
                             praesentium dolor consequuntur ratione soluta?</p>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores animi sit laborum nemo
-                            asperiores
-                            repudiandae, natus ullam magni accusantium sed soluta ex nobis, minima amet exercitationem
-                            obcaecati
-                            neque vero quisquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
-                            voluptates
-                            quo
-                            quis
-                            veritatis totam? Laborum, minus quidem dicta itaque magnam placeat quisquam quod, alias
-                            temporibus,
-                            consequatur est voluptate. Error, fugiat. Lorem ipsum dolor, sit amet consectetur
-                            adipisicing
-                            elit.
-                            Commodi, nam ipsum! Consectetur aperiam non officia eos et repellendus, similique voluptatum
-                            harum
-                            deleniti vitae. Corrupti eaque dignissimos voluptas, atque sequi nihil?</p>
                     </div>
                 </div>
             </div>
@@ -82,9 +66,9 @@
         </section>
 
 
-        <section>
+        <section id="skills">
             <div class="area">
-                <div id="skills" class="skills">
+                <div class=" skills">
                     <h2 class="nav-head">Skills</h2>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores animi sit laborum nemo
                         asperiores
@@ -95,12 +79,14 @@
                         asperiores
                         repudiandae, natus ullam magni accusantium sed soluta ex nobis, minima amet exercitationem
                         obcaecati
-                        neque vero quisquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias voluptates
+                        neque vero quisquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
+                        voluptates
                         quo
                         quis
                         veritatis totam? Laborum, minus quidem dicta itaque magnam placeat quisquam quod, alias
                         temporibus,
-                        consequatur est voluptate. Error, fugiat. Lorem ipsum dolor, sit amet consectetur adipisicing
+                        consequatur est voluptate. Error, fugiat. Lorem ipsum dolor, sit amet consectetur
+                        adipisicing
                         elit.
                         Commodi, nam ipsum! Consectetur aperiam non officia eos et repellendus, similique voluptatum
                         harum
@@ -115,7 +101,19 @@
             <div class="area">
                 <div class="contact" id="contact">
                     <h2 class="nav-head">Contact</h2>
-                    <form action="">
+                    <form action="none">
+
+                        <label for="fname">First Name</label>
+                        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+                        <label for="lname">Last Name</label>
+                        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+                        <label for="subject">Subject</label>
+                        <textarea id="subject" name="subject" placeholder="Write something.."
+                            style="height:200px"></textarea>
+
+                        <input type="submit" value="Submit">
 
                     </form>
 
