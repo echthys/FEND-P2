@@ -67,6 +67,9 @@ header p {
     width: 100%;
     z-index: 1;
     color: white;
+    border-bottom: 2px solid #F0AE10;
+    border-top: 2px solid #F0AE10;
+
 }
 
 
@@ -77,10 +80,18 @@ nav ul {
     padding: 0.5em;
     float: right;
     margin-right:  2%;
+    
 }
 
 nav ul li {
     padding-left: 1em;
+    text-transform: uppercase;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+nav ul li:hover{
+    color: #F0AE10;
 }
 
 
@@ -92,15 +103,14 @@ nav ul li {
 
 .about {
     padding: 1%;
-    min-height: 80vh;
+    min-height: 60vh;
 }
 
 .about h2 {
     border-bottom: 5px solid #F0AE10;
     margin-top: 1%;
     margin-bottom: 1%;
-    /* width: 20%; */
-    text-align: center;
+    width: 20%;
 }
 
 .highlight {
@@ -113,18 +123,61 @@ nav ul li {
     padding: 1%;
     background-color: #175171;
     color: white;
-    height: 80vh;
+    min-height: 60vh;
 }
 
 .skills h2 {
     border-bottom: 5px solid #F0AE10;
     margin-bottom: 1%;
+    margin-top: 2%;
     width: 20%;
 }
 
 .contact {
     margin: 1%;
-    min-height: 80vh;
+    min-height: 50vh;
+}
+
+.contact h2 {
+    border-bottom: 5px solid #F0AE10;
+    margin-bottom: 1%;
+    margin-top: 2%;
+    width: 20%;
+}
+
+
+/* Form */
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 1%; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+    margin-top: 1%; 
+    margin-bottom: 2%;
+    resize: vertical;
+  }
+  
+
+  input[type=submit] {
+    background-color: #175171;
+    color: white;
+    padding: 1% 2%;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #F0AE10;
+  }
+
+
+/* Footer */
+footer {
+    background-color:#175171;
+    padding: 1%;
 }
 
 /* // X-Small devices (portrait phones, less than 576px) */
@@ -190,6 +243,7 @@ nav ul li {
     h2 {
         font-size: 3rem;
         padding: 1% 0%;
+        text-align: center;
     }
 
     p {
@@ -205,8 +259,4 @@ nav ul li {
         text-align: center;
     }
 
-    
-    .skills h2 {
-        width: 10%;
-    }
   }
