@@ -1,9 +1,17 @@
-// Gets a list of all nav items
+/**
+* @description Gets Nav items by looking for any HTML that has class nav-head.
+*/
 function getNavItems() {
     const items = document.getElementsByClassName("nav-head");
     return items;
 }
 
+
+/**
+* @description Adds items to nav bar
+* @constructor
+* @param {string} navItems -  The items to add to the nav bar
+*/
 function createNavBarEntries(navItems) {
     let nbl = document.getElementById("nav-list"); //Select Navbar
     for (const item of navItems) {
@@ -13,7 +21,9 @@ function createNavBarEntries(navItems) {
     }
 }
 
-
+/**
+* @description makes scroll between headings smooth
+*/
 function smoothScroll() {
     const liItems = document.getElementsByTagName("li");
     for (const li of liItems) {
@@ -23,6 +33,10 @@ function smoothScroll() {
         })
     }
 }
+
+/**
+* @description highlights a section
+*/
 
 function highlight() {
     const sections = document.getElementsByTagName("section");
@@ -39,16 +53,15 @@ function highlight() {
     }
 }
 
-
-// Source: https://www.javascripttutorial.net/dom/css/check-if-an-element-is-visible-in-the-viewport/
+/**
+* @description Checks if an element is the view port.
+* @param element - The element to check in view port.
+*   Source: https://www.javascripttutorial.net/dom/css/check-if-an-element-is-visible-in-the-viewport/
+*/
 function isInViewport(element) {
     console.log(element)
     const rect = element.getBoundingClientRect();
     console.log(rect.top)
-    // console.log(window.innerHeight)
-    // console.log(document.documentElement.clientHeight)
-    // console.log(window.innerWidth)
-    // console.log(document.documentElement.clientWidth)
     console.log(rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
     return (
         rect.top >= 0 &&
@@ -59,6 +72,9 @@ function isInViewport(element) {
 }
 
 
+/**
+ * @description calls all required functions.
+ */
 function main() {
     const navItems = getNavItems();
     createNavBarEntries(navItems);
