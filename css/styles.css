@@ -63,7 +63,7 @@ header p {
 .nav-bar {
     position: fixed;
     background-color: #175171;
-    width: 100vw;
+    width: 100%;
     z-index: 1;
     color: white;
 }
@@ -75,11 +75,13 @@ nav ul {
     list-style: none;
     padding: 0.5em;
     float: right;
+    margin-right:  2%;
 }
 
 nav ul li {
     padding-left: 1em;
 }
+
 
 /* About */
 
@@ -170,7 +172,7 @@ nav ul li {
     
     header p {
         font-size: 4.5em;
-        margin-top: 30%;
+        margin-top: 35%;
     }
  }
  
@@ -186,7 +188,7 @@ nav ul li {
     
     header p {
         font-size: 4.5em;
-        margin-top: 20%;
+        margin-top: 22%;
     }
 
     h2 {
