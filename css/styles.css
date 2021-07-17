@@ -132,10 +132,25 @@ nav ul li:hover{
     margin-top: 2%;
     width: 20%;
 }
+/* Work */
 
+.work {
+    padding: 1%;
+    min-height: 60vh;
+}
+
+.work h2 {
+    border-bottom: 5px solid #F0AE10;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    width: 20%;
+}
+/* Contact  */
 .contact {
-    margin: 1%;
+    padding: 1%;
     min-height: 50vh;
+    background-color: #175171;
+    color: white;
 }
 
 .contact h2 {
@@ -161,7 +176,7 @@ input[type=text], select, textarea {
   
 
   input[type=submit] {
-    background-color: #175171;
+    background-color:#F0AE10;
     color: white;
     padding: 1% 2%;
     border: none;

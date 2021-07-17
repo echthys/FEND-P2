@@ -40,9 +40,9 @@ function smoothScroll() {
 
 function highlight() {
     const sections = document.getElementsByTagName("section");
+    const nav = document.getElementsByClassName("nav-bar")[0]
     for (const section of sections) {
         window.addEventListener("scroll", function () {
-            // console.log(section.)
             if (isInViewport(section)) {
                 section.setAttribute("class", "highlight");
             }
@@ -59,10 +59,7 @@ function highlight() {
 *   Source: https://www.javascripttutorial.net/dom/css/check-if-an-element-is-visible-in-the-viewport/
 */
 function isInViewport(element) {
-    console.log(element)
     const rect = element.getBoundingClientRect();
-    console.log(rect.top)
-    console.log(rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
     return (
         rect.top >= 0 &&
         rect.left >= 0 &&
@@ -71,6 +68,12 @@ function isInViewport(element) {
     );
 }
 
+
+function hideNav() {
+    const nav = document.getElementsByClassName("nav-bar")[0];
+    nav.hidden = true;
+
+}
 
 /**
  * @description calls all required functions.
